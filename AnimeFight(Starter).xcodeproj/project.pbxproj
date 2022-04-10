@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		E32136372803608500585F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32136362803608500585F3E /* AppDelegate.swift */; };
 		E32136392803608500585F3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32136382803608500585F3E /* SceneDelegate.swift */; };
-		E321363B2803608500585F3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321363A2803608500585F3E /* ViewController.swift */; };
 		E321363E2803608500585F3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321363C2803608500585F3E /* Main.storyboard */; };
 		E32136402803608600585F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E321363F2803608600585F3E /* Assets.xcassets */; };
 		E32136432803608600585F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32136412803608600585F3E /* LaunchScreen.storyboard */; };
+		E321364B280360A000585F3E /* KVOBaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321364A280360A000585F3E /* KVOBaseScreen.swift */; };
+		E321364D280360A800585F3E /* KVOSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321364C280360A800585F3E /* KVOSelectionScreen.swift */; };
+		E3213651280360B800585F3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3213650280360B800585F3E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E32136332803608500585F3E /* AnimeFight(Starter).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnimeFight(Starter).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32136362803608500585F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E32136382803608500585F3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E321363A2803608500585F3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E321363D2803608500585F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E321363F2803608600585F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E32136422803608600585F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E32136442803608600585F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E321364A280360A000585F3E /* KVOBaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOBaseScreen.swift; sourceTree = "<group>"; };
+		E321364C280360A800585F3E /* KVOSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOSelectionScreen.swift; sourceTree = "<group>"; };
+		E3213650280360B800585F3E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				E32136362803608500585F3E /* AppDelegate.swift */,
 				E32136382803608500585F3E /* SceneDelegate.swift */,
-				E321363A2803608500585F3E /* ViewController.swift */,
+				E321364A280360A000585F3E /* KVOBaseScreen.swift */,
+				E321364C280360A800585F3E /* KVOSelectionScreen.swift */,
+				E3213650280360B800585F3E /* Constants.swift */,
 				E321363C2803608500585F3E /* Main.storyboard */,
 				E321363F2803608600585F3E /* Assets.xcassets */,
 				E32136412803608600585F3E /* LaunchScreen.storyboard */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E321363B2803608500585F3E /* ViewController.swift in Sources */,
+				E321364B280360A000585F3E /* KVOBaseScreen.swift in Sources */,
 				E32136372803608500585F3E /* AppDelegate.swift in Sources */,
+				E3213651280360B800585F3E /* Constants.swift in Sources */,
+				E321364D280360A800585F3E /* KVOSelectionScreen.swift in Sources */,
 				E32136392803608500585F3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

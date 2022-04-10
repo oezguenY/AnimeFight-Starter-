@@ -1,24 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Base Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="KVOBaseScreen" customModule="AnimeFight_Starter_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cUj-zf-7Sp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gokuvssaitama" translatesAutoresizingMaskIntoConstraints="NO" id="9Vz-Ts-6DY">
+                                <rect key="frame" x="25" y="225.5" width="364" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Vz-Ts-6DY" secondAttribute="height" multiplier="16:9" id="Mom-tW-HSR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rh-EN-BN3">
+                                <rect key="frame" x="77" y="534.5" width="260" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="GEK-bJ-fUt"/>
+                                    <constraint firstAttribute="height" constant="50" id="Iio-uB-iX3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" red="0.97812938689999995" green="0.89030045270000002" blue="0.31347513199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Choose a Side">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.74510893489999996" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAz-5n-ZQk">
+                                <rect key="frame" x="20" y="445.5" width="374" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="JY6-6h-jks"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ipm-oU-Rlj"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SAz-5n-ZQk" firstAttribute="leading" secondItem="cUj-zf-7Sp" secondAttribute="leading" constant="20" id="5Ds-8I-bct"/>
+                            <constraint firstAttribute="trailing" secondItem="SAz-5n-ZQk" secondAttribute="trailing" constant="20" id="CsS-RD-0QA"/>
+                            <constraint firstItem="SAz-5n-ZQk" firstAttribute="top" secondItem="9Vz-Ts-6DY" secondAttribute="bottom" constant="15" id="F3b-mc-3Pd"/>
+                            <constraint firstItem="3Rh-EN-BN3" firstAttribute="top" secondItem="SAz-5n-ZQk" secondAttribute="bottom" constant="30" id="OFZ-ZE-L23"/>
+                            <constraint firstItem="9Vz-Ts-6DY" firstAttribute="leading" secondItem="cUj-zf-7Sp" secondAttribute="leading" constant="25" id="XBz-lD-6PO"/>
+                            <constraint firstItem="3Rh-EN-BN3" firstAttribute="centerX" secondItem="cUj-zf-7Sp" secondAttribute="centerX" id="r8R-WP-4tp"/>
+                            <constraint firstAttribute="trailing" secondItem="9Vz-Ts-6DY" secondAttribute="trailing" constant="25" id="wjw-P2-xAj"/>
+                            <constraint firstItem="9Vz-Ts-6DY" firstAttribute="centerY" secondItem="cUj-zf-7Sp" secondAttribute="centerY" constant="-120" id="zVg-Mi-Pzx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="3Rh-EN-BN3" id="PgB-N9-wRy"/>
+                        <outlet property="mainImageView" destination="9Vz-Ts-6DY" id="Fmg-Qw-1Bx"/>
+                        <outlet property="nameLabel" destination="SAz-5n-ZQk" id="p0j-K5-BPE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="83"/>
+        </scene>
+        <!--Selection Screen-->
+        <scene sceneID="K2c-Wn-JhX">
+            <objects>
+                <viewController storyboardIdentifier="KVOSelectionScreen" id="gA7-b9-jlg" customClass="KVOSelectionScreen" customModule="AnimeFight_Starter_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o22-P9-x4X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE YOUR FIGHTER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNC-Zr-Squ">
+                                <rect key="frame" x="79" y="74" width="256" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="1gf-ZK-GcE"/>
+                                    <constraint firstAttribute="width" constant="256" id="9Lw-ii-iCb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziL-vF-fdv">
+                                <rect key="frame" x="132" y="293" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5cL-FY-rrL"/>
+                                    <constraint firstAttribute="height" constant="150" id="bzm-el-8qP"/>
+                                </constraints>
+                                <state key="normal" image="dbzlogo"/>
+                                <connections>
+                                    <action selector="dbzButtonTapped:" destination="gA7-b9-jlg" eventType="touchUpInside" id="V11-bE-vnm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKx-gU-3qF">
+                                <rect key="frame" x="132" y="488.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="fcw-NO-Kk3"/>
+                                    <constraint firstAttribute="height" constant="150" id="ryH-I8-jXj"/>
+                                </constraints>
+                                <state key="normal" image="opmlogo"/>
+                                <connections>
+                                    <action selector="opmButtonTapped:" destination="gA7-b9-jlg" eventType="touchUpInside" id="YVG-Eb-XKk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k4r-vc-c7l"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mKx-gU-3qF" firstAttribute="centerX" secondItem="o22-P9-x4X" secondAttribute="centerX" id="DsE-ti-SqY"/>
+                            <constraint firstItem="ziL-vF-fdv" firstAttribute="centerX" secondItem="o22-P9-x4X" secondAttribute="centerX" id="FVP-SW-jd0"/>
+                            <constraint firstItem="XNC-Zr-Squ" firstAttribute="centerX" secondItem="o22-P9-x4X" secondAttribute="centerX" id="JCZ-4h-s3K"/>
+                            <constraint firstItem="mKx-gU-3qF" firstAttribute="top" secondItem="ziL-vF-fdv" secondAttribute="bottom" constant="45.5" id="MNz-A7-Cst"/>
+                            <constraint firstItem="XNC-Zr-Squ" firstAttribute="top" secondItem="k4r-vc-c7l" secondAttribute="top" constant="30" id="ebX-vi-jiz"/>
+                            <constraint firstItem="ziL-vF-fdv" firstAttribute="centerY" secondItem="o22-P9-x4X" secondAttribute="centerY" constant="-80" id="reB-AX-sf9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6F-p3-sfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="82"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dbzlogo" width="666" height="375"/>
+        <image name="gokuvssaitama" width="610" height="409"/>
+        <image name="opmlogo" width="984" height="253"/>
+    </resources>
 </document>
